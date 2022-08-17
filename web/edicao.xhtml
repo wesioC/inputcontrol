@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:decorate xmlns="http://www.w3.org/1999/xhtml"
+             xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+    template="template.xhtml"
+    xmlns:p="http://primefaces.org/ui">
+    
+    <ui:define name="conteudo" >
+      
+
+            <h:form>
+       <link rel="stylesheet" type="text/css" href="CSS/new.css"/>
+                <h:panelGrid columns="1">
+                <p:outputLabel value="Nome:" ></p:outputLabel>
+                <p:inputText id="nome" value="#{bean.d.nome}"></p:inputText>
+                <p:outputLabel value="Turma: "></p:outputLabel>
+                <p:inputText id="turma" value="#{bean.d.turma}" ></p:inputText>
+                <p:outputLabel value="Nome do Responsável: "></p:outputLabel>
+                <p:inputText id="nomeres" value="#{bean.d.responsavel}"></p:inputText>
+                <p:outputLabel value="Email do Responsável: "></p:outputLabel>
+                <p:inputText id="email" value="#{bean.d.emailRes}"></p:inputText>
+                <p:outputLabel value="Cel. do Responsável: " ></p:outputLabel>
+                <p:inputMask id="cel" value="#{bean.d.numRes}" mask="(999) 99999-9999"/>
+                <p:outputLabel value="Número de Matrícula: "></p:outputLabel>
+                <p:inputText id="nummat" value="#{bean.d.matricula}"></p:inputText>
+            </h:panelGrid>
+        <h:commandButton value="Concluir" actionListener="#{bean.update()}" action="editar.jsf" class="botao1"></h:commandButton>
+            </h:form>
+</ui:define>
+    <ui:define name="rodape"></ui:define>
+</ui:decorate>
+

@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:decorate xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      template="template.xhtml"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+          
+    <ui:define name="conteudo">
+        <link rel="stylesheet" type="text/css" href="CSS/new.css"/>
+        <h:form enctype="multipart/form-data">
+            <p:commandButton action="principalAdm.jsf" icon="ui-icon-arrowreturnthick-1-w"/>
+        <center>
+              <br/>
+            <br/>
+            <div ><img class="avatar" src="#{bean.d.imagem}" width="100" height="100"  ></img></div>
+              <br/>
+            <br/>
+              <h:panelGrid columns="2" >
+                
+                   <p:outputLabel value="Nome: " class="txt"></p:outputLabel>
+                <p:outputLabel id="nome" title="Nome completo do estudante" value="#{bean.d.nome}" ></p:outputLabel>
+                <p:outputLabel value="Turma: " class="txt"></p:outputLabel>
+                <p:outputLabel id="turma" value="#{bean.d.turma}"></p:outputLabel>
+                <p:outputLabel value="Nome do Responsável: " class="txt"></p:outputLabel>
+                <p:outputLabel id="nomeres" value="#{bean.d.responsavel}"></p:outputLabel>
+                <p:outputLabel value="Email do Responsável: " class="txt"></p:outputLabel>
+                <p:outputLabel id="email" value="#{bean.d.emailRes}"></p:outputLabel>
+                <p:outputLabel value="Cel. do Responsável: "  class="txt"></p:outputLabel>
+                <p:outputLabel id="cel" value="#{bean.d.numRes}" ></p:outputLabel>
+                <p:outputLabel value="Número de Matrícula: " class="txt"></p:outputLabel>
+                <p:outputLabel id="nummat" value="#{bean.d.matricula}"></p:outputLabel>
+                
+            </h:panelGrid>
+            
+              
+            <h:panelGrid  columns="2">
+                
+                <h:commandButton class="botao1" value="Permitir Acesso (f1)" 
+                                 actionListener="#{bean.situacao()}" action="principalAdm.jsf">
+                    <p:hotkey bind="f1" actionListener="#{bean.situacao()}" action="principalAdm.jsf"></p:hotkey>
+                </h:commandButton>
+                <h:commandButton class="botao2"  value="Negar Acesso (f2)" action="principalAdm.jsf" >
+                    <p:hotkey bind="f2"  action="principalAdm.jsf"></p:hotkey>
+                    </h:commandButton>
+            </h:panelGrid>
+                        </center>
+                    <p:hotkey bind="esc"  action="principalAdm.jsf"></p:hotkey>
+            </h:form>
+    </ui:define>
+</ui:decorate>
+

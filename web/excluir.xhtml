@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:decorate xmlns="http://www.w3.org/1999/xhtml"
+             xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+    template="template.xhtml"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <ui:define name="conteudo">
+    <link rel="stylesheet" type="text/css" href="CSS/new.css"/>
+            <h:form>
+                <p:dataTable var="item" value="#{bean.alunos}">
+                <p:column headerText="Matrícula:" filterBy="#{item.matricula}">
+                    <h:outputText value="#{item.matricula}" ></h:outputText>
+                </p:column>
+                    <p:column headerText="Nome:" filterBy="#{item.nome}">
+                    <h:outputText value="#{item.nome}"></h:outputText>
+                </p:column>
+                    <p:column headerText="Turma:" filterBy="#{item.turma}">
+                    <h:outputText value="#{item.turma}"></h:outputText>
+                </p:column>
+                    <p:column headerText="Responsável:" >
+                    <h:outputText value="#{item.responsavel}"></h:outputText>
+                </p:column>               
+                    <p:column headerText="Email do Responsável:" >
+                    <h:outputText value="#{item.emailRes}"></h:outputText>
+                </p:column>               
+                    <p:column headerText="Número do Responsável:">
+                    <h:outputText value="#{item.numRes}"></h:outputText>
+                </p:column>  
+                <p:column headerText="Excluir:">
+                    <center>
+                    <p:commandButton icon="ui-icon-trash" action="#{bean.mostrarDis()}" actionListener="#{bean.excluir(item)}" update="@form" ></p:commandButton>
+                    </center>
+                </p:column>               
+            </p:dataTable>
+            </h:form>
+</ui:define>
+    <ui:define name="rodape"></ui:define>
+</ui:decorate>
+
+

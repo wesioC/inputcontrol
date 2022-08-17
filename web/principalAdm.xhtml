@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:decorate xmlns="http://www.w3.org/1999/xhtml"
+             xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+    template="template.xhtml"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:b="http://bootsfaces.net/ui">
+    <ui:define name="conteudo">
+      <link rel="stylesheet" type="text/css" href="CSS/new.css"/>
+        <h:form id="panel">
+            
+ 
+        <p:focus context="panel"/>
+            <center>
+               <h:panelGrid columns="1">
+                    <b><h2 class="txt">Inserir Número de Matrícula:</h2></b>
+                    <h:inputText id="mat" class="caixatxt" value="#{bean.mat}" required="true" label="Firstname">
+                    <f:validateLength minimum="2" />
+                    </h:inputText>
+                    
+                    <h:commandButton value="Buscar" action="#{bean.pesquisar(mat)}" class="botao1"></h:commandButton>
+                    
+                </h:panelGrid>
+            </center>
+           
+           
+        </h:form>
+</ui:define>
+    <ui:define name="rodape"></ui:define>
+</ui:decorate>
+

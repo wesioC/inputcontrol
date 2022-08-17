@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:decorate xmlns="http://www.w3.org/1999/xhtml"
+             xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+    template="template.xhtml"
+    xmlns:p="http://primefaces.org/ui">
+    <ui:define name="conteudo">
+      <link rel="stylesheet" type="text/css" href="CSS/new.css"/>
+        <h:form>
+            <center>
+               <h:panelGrid columns="1">
+                   <h:commandLink value="Relatorio"  >
+
+                    <p:fileDownload value="#{bean.arquivoRetorno}" />
+                </h:commandLink>
+                   <p:separator/>
+                   <p:growl id="message" showDetail="true" />
+     
+                   <p:commandButton value="Finalizar" action="#{bean.finalizar()}" update="message">
+        <p:confirm header="Confirmation" message="Tem certeza que deseja finalizar?" icon="ui-icon-alert" />
+    </p:commandButton>
+     
+    <p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+        <p:commandButton value="Sim" type="button" action="#{bean.finalizar()}" styleClass="ui-confirmdialog-yes" />
+        <p:commandButton value="Não" type="button" action="principalAdm.jsf" styleClass="ui-confirmdialog-no"  />
+    </p:confirmDialog> 
+                </h:panelGrid>
+            </center>
+           
+        </h:form>
+</ui:define>
+    <ui:define name="rodape"></ui:define>
+</ui:decorate>
+

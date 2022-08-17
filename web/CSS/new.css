@@ -1,0 +1,133 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16/12/2018, 18:10:28
+    Author     : wesio
+*/
+.cabecalhotab {
+
+   text-align: center;
+   font: 18px Lucida Sans, sans-serif;
+   font-weight: bold;
+   color: white;
+   background-color: #008B45;
+
+}
+.caixatxt[type=text] {
+    background-color: #E8E8E8;
+    color: #000000;
+    height: 24px;
+    margin-bottom: 3px;
+    width: 220px;
+    border: 2px solid #008B45;
+    border-radius: 4px
+}
+ .login{
+    position:relative;
+    height:380px;
+    width:310px;
+    border-radius:10%;
+    -moz-border-radius:10%;
+    -webkit-border-radius:10%;
+    background-color:#E8E8E8;
+}
+
+.botao1{
+    background-color: #008B45;
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+.botao2{
+    background-color: #a40707;
+    border: none;
+    
+    color: white;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+.botao3{
+    background-color: #008B45;
+    border: none;
+    color: white;
+    padding: 3px 4px;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+.botao4{
+    background-color: #a40707;
+    border: none;
+    
+    color: white;
+    padding: 3px 4px;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+.espaco{
+    position:relative;
+    float:none;
+    height:100px;
+    width:300px;
+    background-color:transparent;
+}
+.txt{
+    font: 18px Lucida Sans, sans-serif;
+    font-weight:bold;
+    
+    
+}
+
+/*-------------------* MENU * ------------------------*/
+.colormenu{
+    background-color: white;
+    color: #008B45;
+}
+.coloritem{
+    background-color: transparent;
+    color: #008B45;
+}
+/*-------------------* MENU * ------------------------*/
+    
+.fundo{
+    background-image: url("../IMAGENS/index.png");
+}
+.marca{
+    background-image: url("../IMAGENS/marca.png");
+        
+}
+         
+.alingl{
+     float: left;
+     width: 100%;
+}
+
+.avatar{
+ 
+/*border-width: 2px;
+border-color: white;
+border-style: solid;
+display: inline-block;*/
+border-radius: 100px;
+}

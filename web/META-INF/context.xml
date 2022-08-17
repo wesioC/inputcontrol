@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/InputControl">
+
+    <Resource name="jdbc/acessoifba" auth="Container" type="javax.sql.DataSource"
+            maxActive="100" maxIdle="30" maxWait="10000" maxWaitMillis="-1"
+            username="root" password="4466" driverClassName="com.mysql.jdbc.Driver"
+            url="jdbc:mysql://localhost:3306/acessoifba" />
+    
+    
+</Context>

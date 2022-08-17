@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:decorate xmlns="http://www.w3.org/1999/xhtml"
+             xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+    template="template.xhtml"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+    <ui:define name="conteudo" >
+      
+
+            <h:form >
+        <link rel="stylesheet" type="text/css" href="CSS/new.css"/>
+               <h:panelGrid columns="1">
+                
+                <p:outputLabel value="Nome do Usuário: " ></p:outputLabel>
+                <p:inputText id="nome" title="Login" value="#{bean.u.login}"></p:inputText>
+                <p:outputLabel value="Senha: "></p:outputLabel>
+                <p:password value="#{bean.u.senha}"></p:password>
+                <p:outputLabel value="Tipo: "></p:outputLabel>
+                <p:inputText id="tipo" value="#{bean.u.tipo}"></p:inputText>
+                <h5>Digite 1 para usuário do tipo administrador</h5>
+                <h5>Digite 2 para usuário do tipo comum</h5>
+                
+                <p:commandButton value="Cadastrar" action="#{bean.cadastrouser()}" update="@form" ajax="false"></p:commandButton>
+            </h:panelGrid>
+            </h:form>
+</ui:define>
+    <ui:define name="rodape"></ui:define>
+</ui:decorate>
+

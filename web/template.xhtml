@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <link rel="stylesheet" type="text/css" href="CSS/new.css"/>
+    </h:head>
+    
+   
+   
+    <h:body class="fundo" >
+        <div><img src="IMAGENS/marca.png"></img></div>
+        <h:form>
+            <p:menubar class="colormenu" >
+                <p:menuitem value="Home" action="principalAdm.jsf" icon="ui-icon-home" class="coloritem"/>
+        <p:submenu label="Discente" icon="ui-icon-person" class="coloritem">
+            <p:menuitem value="Cadastrar" action="cadastroDiscente.jsf" icon="ui-icon-plus" />
+            <p:menuitem value="Cadastrados" action="listaDiscente.jsf" actionListener="#{bean.mostrarDis()}" icon="ui-icon-disk" />
+            <p:menuitem value="Editar Cadastrados" icon="ui-icon-pencil" action="acoes.jsf" actionListener="#{bean.mostrarDis()}"/>
+        </p:submenu>
+        <p:submenu label="Controle de Acesso" icon="ui-icon-newwin" class="coloritem">
+            <p:menuitem value="Presentes" icon="ui-icon-clipboard" action="listaPresentes.jsf" actionListener="#{bean.presentes()}" />
+            <p:menuitem value="Ausentes" icon="ui-icon-clipboard" action="listaAusentes.jsf" actionListener="#{bean.ausentes()}"/>
+            <p:menuitem value="Finalizar" action="finalizar.jsf" icon="ui-icon-pin-w" />
+        </p:submenu>
+               
+                
+                
+                <p:menuitem value="Help"  icon="ui-icon-help" class="coloritem" iconPos="left"/>
+                <p:menuitem value="Finalizar" style="color: #008B45" icon="ui-icon-arrowreturnthick-1-e" action="finalizar.jsf" class="coloritem" iconPos="left"/>
+                <p:submenu label="#{bean.sair}" icon="ui-icon-person" class="coloritem">
+                    
+            <p:menuitem value="Cadastrar Usuário" action="cadastroUser.jsf" icon="ui-icon-plus" />
+            <p:menuitem value="Sair" action="index.jsf"  />
+                 </p:submenu>
+                
+        
+                </p:menubar>
+        </h:form>
+        <ui:insert name="conteudo"></ui:insert>
+        <ui:insert name="rodape"></ui:insert>
+    </h:body>
+</html>
+
